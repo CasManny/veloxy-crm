@@ -41,7 +41,7 @@ export function SalesCard() {
   return (
     <Card className="">
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
+        <CardTitle>Total Vistors</CardTitle>
         <CardDescription>
           Showing total visitors for the last 6 months
         </CardDescription>

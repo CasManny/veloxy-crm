@@ -1,8 +1,7 @@
 "use client";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-  ArrowLeft,
-  ArrowRight,
   Award,
   Badge,
   CheckCircle,
@@ -16,18 +15,16 @@ import {
   Stars,
   ThumbsDown,
   ThumbsUp,
-  User,
+  User
 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import React, { Dispatch, SetStateAction, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ResponsiveModal } from "@/components/responsive-modal";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const leadClients = [
   {
@@ -249,11 +246,11 @@ interface LeadClientProps {
 const LeadClients = () => {
   return (
     <div className="mt-2 flex-1">
-      <h1 className="font-bold mb-2">
+      <h1 className="font-bold mb-2 text-xs sm:text-xl">
         Copilot have pinpointed 20 key leads that shows strong purchase intent
         and are actively engaging. This leads needs your focus
       </h1>
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-col lg:flex-row">
         {leadClients.slice(0, 2).map((client, index) => (
           <LeadClientCard key={index} {...client} />
         ))}
@@ -311,7 +308,7 @@ const LeadClientCard = ({
             </div>
             <div className="">
               <Card className="p-5 shadow-lg">
-                <div className="p-4 flex justify-between items-center bg-gradient-to-t from-brand-1/20 to-brand-2/20">
+                <div className="p-4 flex flex-col md:flex-row gap-2 justify-between items-center bg-gradient-to-t from-brand-1/20 to-brand-2/20">
                   <div className="item-center text-brand-1">
                     <Stars className="mr-2" />
                     <p>{reasonforrecommending}</p>
@@ -376,8 +373,8 @@ const LeadClientCard = ({
                         </div>
                         <div className="my-5">
                           {reasonForSelection.map((item, index) => (
-                            <div className="flex items-center gap-2">
-                              <div className="item-center gap-3 bg-white p-5 rounded-lg">
+                            <div className="flex flex-col md:flex-row items-center gap-2">
+                              <div className="item-center w-full gap-3 bg-white p-5 rounded-lg">
                                 <CheckCircle className="size-14 text-brand-1" />
                                 <div className="">
                                   <p className="font-extrabold">
@@ -388,7 +385,7 @@ const LeadClientCard = ({
                                   </span>
                                 </div>
                               </div>
-                              <div className="item-center gap-3 bg-white p-5 rounded-lg">
+                              <div className="item-center  w-full gap-3 bg-white p-5 rounded-lg">
                                 <Award className="size-14 text-brand-7" />
                                 <div className="">
                                   <p className="font-extrabold">
@@ -399,7 +396,7 @@ const LeadClientCard = ({
                                   </span>
                                 </div>
                               </div>
-                              <div className="item-center gap-3 bg-white p-5 rounded-lg">
+                              <div className="item-center gap-3 w-full bg-white p-5 rounded-lg">
                                 <RecycleIcon className="size-14 text-brand-10" />
                                 <div className="">
                                   <p className="font-extrabold">Intent</p>
@@ -415,7 +412,7 @@ const LeadClientCard = ({
                     </TabsContent>
                   </Tabs>
                 </div>
-                <div className="my-10 flex justify-between">
+                <div className="my-10 flex-col gap-4 md:flex-row flex justify-between">
                   <div className="item-center gap-2">
                     <Button
                       size={"icon"}
@@ -476,16 +473,16 @@ const LeadClientCard = ({
           </div>
         </div>
       </ResponsiveModal>
-      <Card className="cursor-pointer" onClick={() => setModalOpen(true)}>
-        <div className="p-5">
+      <Card className="cursor-pointer w-full" onClick={() => setModalOpen(true)}>
+        <div className="p-1 sm:p-5">
           <div className="flex items-center">
-            <Avatar className="size-16">
+            <Avatar className="size-10 sm:size-16">
               <AvatarImage src={image} />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <div className="ml-2 flex flex-col">
-              <h1 className="font-bold">{name}</h1>
-              <div className="flex">
+            <div className="ml-1 sm:ml-2 flex flex-col">
+              <h1 className="font-bold text-xs sm:text-normal">{name}</h1>
+              <div className="flex text-xs sm:text-base">
                 {position}
                 <Dot className="" />
                 {country}
@@ -494,12 +491,12 @@ const LeadClientCard = ({
           </div>
           <div className="bg-gradient-to-r from-brand-9/50 to-brand-9/20 my-2 p-5 rounded-md">
             <div className="flex items-center gap-2">
-              <Icon />
-              <p className="font-bold">{category}</p>
+              <Icon className="size-3 sm:size-5" />
+              <p className="font-bold text-sm sm:text-base">{category}</p>
             </div>
-            <p>{reasonforrecommending}</p>
+            <p className="text-xs sm:text-normal">{reasonforrecommending}</p>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex flex-col text-xs sm:text-base sm:flex-row items-center gap-1">
             <p>{task}</p>
             <Dot />
             <p>{category}</p>

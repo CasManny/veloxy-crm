@@ -117,4 +117,13 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .data-table {
+    @apply z-10 w-full overflow-hidden
+  }
+  .span {
+    @apply flex items-center gap-1 text-brand-1/50 rounded-lg p-1 line-clamp-1 bg-brand-9/50
+  }
+  .icon {
+    @apply size-4
+  }
 }

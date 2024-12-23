@@ -50,19 +50,19 @@ export function LeadClientDataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-md">
-      <div className="flex items-center border rounded-lg max-w-2xl m-5 p-4">
+    <div className="w-full">
+      <div className="flex items-center max-w-md w-full border rounded-lg m-5  p-2 sm:p-4">
         <Input
           placeholder="Filter names with Copilot"
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
-           className="w-full h-full placeholder:text-xl text-2xl focus:outline-none focus:ring-0 focus-visible:ring-0 border-none"
+           className="w-full h-full placeholder:text-xl  text-base sm:text-2xl focus:outline-none focus:ring-0 focus-visible:ring-0 border-none"
         />
-        <Image src={'/ai-logo.jpeg'} alt="ai-logo" height={20} width={20} className="size-10 rounded-full" />
+        <Image src={'/ai-logo.jpeg'} alt="ai-logo" height={20} width={20} className="size-5 md:size-10 rounded-full" />
       </div>
-      <Table className="text-2xl">
+      <Table className="text-sm md:text-2xl">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>

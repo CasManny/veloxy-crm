@@ -3,10 +3,11 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 import RecentProjects from "./recent-projects";
 import PinnedProjects from "./pinned-projects";
+import AgentSkill from "./agent-skill";
 
 const Sidebar = () => {
   return (
-    <section className="sticky left-0 top-0 flex h-screen overflow-y-auto w-fit flex-col justify-between pl-4 pt-10 pb-8  max-sm:hidden lg:w-[200px] bg-brand-3 scrollbar-hidden">
+    <section className="sticky left-0 top-0 xl:flex h-screen overflow-y-auto w-fit flex-col justify-between pl-4 pt-10 pb-8  hidden lg:w-[200px] bg-brand-3 scrollbar-hidden">
       <div className="space-y-5">
         <div className="">
           <Link href={"/"} className="flex items-center gap-2">
@@ -15,6 +16,7 @@ const Sidebar = () => {
           </Link>
           <RecentProjects />
           <PinnedProjects />
+          <AgentSkill />
         </div>
         {sidebarLinks.map((link, index) => (
           <div className="" key={index}>

@@ -247,7 +247,7 @@ export function ProjectTable() {
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-sm w-full"
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -277,7 +277,7 @@ export function ProjectTable() {
         </DropdownMenu>
       </div>
       <div className="rounded-md border">
-        <Table>
+        <Table className="">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -366,5 +366,5 @@ export function ProjectTable() {
         </div>
       </div>
     </div>
-  );
+  )
 }

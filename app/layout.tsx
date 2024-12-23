@@ -23,12 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className={`${montserrat.variable} antialiased relative w-full h-full`}>
         <TopNavbar />
-        <main className="flex relative">
+        <main className="flex">
           <Sidebar />
-          <section className="flex min-h-screen bg-brand-3/80 flex-1 flex-col pb-6 max-md:pb-14">
-            <div className="w-full h-full">{children}</div>
+          <section className="flex-1 bg-brand-3/80">
+            <div className="">{children}</div>
           </section>
         </main>
       </body>

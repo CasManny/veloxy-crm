@@ -69,16 +69,16 @@ const StatusCard = () => {
         if (!data) return null; // Handle case where no data is provided
 
         return (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                 {data.map((item) => {
                     const IconComponent = item.Icon; // Get the icon component
                     return (
                         <div key={item.label} className="flex items-center justify-between p-3 rounded-md bg-neutral-100">
                             <div className="flex items-center gap-1">
                                 <IconComponent className={`${item.color} h-5 w-5`} /> {/* Use the specified color */}
-                                <span className="font-bold">{item.label}</span>
+                                <span className="font-bold text-base md:text-lg">{item.label}</span>
                             </div>
-                            <span className="text-brand-1 font-bold">{item.value}</span>
+                            <span className="text-brand-1 font-bold text-xs md:text-lg">{item.value}</span>
                         </div>
                     );
                 })}
@@ -87,7 +87,7 @@ const StatusCard = () => {
     };
 
     return (
-        <Card className="py-3 px-4">
+        <Card className="py-3 px-4 bg-white">
             <Tabs defaultValue="today" className="w-full mb-5">
                 <TabsList className="w-full">
                     <TabsTrigger value="today">Today</TabsTrigger>

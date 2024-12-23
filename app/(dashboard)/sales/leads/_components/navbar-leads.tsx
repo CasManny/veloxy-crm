@@ -4,7 +4,7 @@ import NavbarLeadsOptions from "./navbar-options";
 
 const NavbarLeads = () => {
   return (
-    <div className="bg-white w-full p-2 flex justify-between rounded-sm shadow-lg">
+    <div className="bg-white hidden xl:flex w-full p-2 justify-between rounded-sm shadow-lg">
           <OpenLeads />
           <NavbarLeadsOptions />
     </div>

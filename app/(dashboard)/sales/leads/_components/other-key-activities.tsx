@@ -80,20 +80,20 @@ const OtherKeyActivities = () => {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      <h1 className="text-lg font-bold">Other key activities</h1>
+      <h1 className="sm:text-lg text-sm my-2 font-bold">Other key activities</h1>
       <div className="space-y-4">
         {activities.map((activity, index) => (
           <OtherActivitiesCard key={index} {...activity} />
         ))}
       </div>
       <p
-        className="text-brand-1 animate-pulse font-bold my-2 cursor-pointer"
+        className="text-brand-1 text-sm sm:text-base animate-pulse font-bold my-2 cursor-pointer"
         onClick={() => setOpen(true)}
       >
         Show all key activities
       </p>
       <ResponsiveModal open={open} onOpenChange={setOpen}>
-        <div className="p-10 space-y-4">
+        <div className="p-10 space-y-4 bg-white">
           {otherActivities.map((activity, index) => (
             <OtherActivitiesCard key={index} {...activity} />
           ))}
@@ -125,7 +125,7 @@ const OtherActivitiesCard = ({
   message,
 }: OtherActivitiesCardProps) => {
   return (
-    <Card className="flex flex-col gap-2 p-2 cursor-pointer">
+    <Card className="flex flex-col gap-2 p-1 sm:p-2 cursor-pointer">
       <div className="flex items-center">
         <div className="mr-2">
           <Avatar>
@@ -134,8 +134,8 @@ const OtherActivitiesCard = ({
           </Avatar>
         </div>
         <div className="">
-          <p className="font-bold">{label}</p>
-          <div className="flex items-center gap-0.5">
+          <p className="font-bold text-xs sm:text-base">{label}</p>
+          <div className="flex text-xs sm:text-base items-center gap-0.5">
             <p>{bank}</p>
             <Dot />
             <p>${cash}</p>
@@ -145,8 +145,8 @@ const OtherActivitiesCard = ({
         </div>
       </div>
       <div className="bg-neutral-100 gap-1 rounded flex items-center p-2">
-        <Icon />
-        <p>{message}</p>
+        <Icon className="size-3 sm:size-5" />
+        <p className="text-xs sm:text-base">{message}</p>
       </div>
     </Card>
   );
