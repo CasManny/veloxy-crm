@@ -1,24 +1,21 @@
-import NavbarLeadsOptions from "@/app/(dashboard)/sales/leads/_components/navbar-options";
 import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarTrigger
 } from "@/components/ui/menubar";
 import {
-  ClockArrowUp,
-  Combine,
-  Ellipsis,
-  ImageIcon,
-  ListFilter,
-  Logs,
-  Plus,
-  RotateCw,
-  SquarePen,
-  Trash2,
+    ClockArrowUp,
+    Combine,
+    Ellipsis,
+    ImageIcon,
+    ListFilter,
+    Logs,
+    Plus,
+    RotateCw,
+    SquarePen,
+    Trash2,
 } from "lucide-react";
 
 const tabs = [
@@ -69,7 +66,7 @@ const HintsMenusBar = () => {
         </MenubarTrigger>
         <MenubarContent className="flex flex-col gap-4">
           {tabs.map((item, index) => (
-            <MenubarItem className="flex gap-2 items-center">
+            <MenubarItem className="flex gap-2 items-center" key={index}>
               <item.Icon />
               {item.label}
             </MenubarItem>

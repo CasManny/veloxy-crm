@@ -1,3 +1,6 @@
+import AgentDrawer from "@/components/agent-drawer";
+import HintsMenusBar from "@/components/hints-menu-bar";
+import Table from "@/components/table";
 import {
   MessageSquare,
   MessagesSquare,
@@ -8,13 +11,9 @@ import Image from "next/image";
 import LeadClientTable from "./_components/lead-client-table";
 import LeadClients from "./_components/lead-clients";
 import NavbarLeads from "./_components/navbar-leads";
+import OpenLeads from "./_components/open-leads";
 import OtherKeyActivities from "./_components/other-key-activities";
 import ProgressMoney from "./_components/progress-money";
-import Table from "@/components/table";
-import OpenLeads from "./_components/open-leads";
-import HintsMenusBar from "@/components/hints-menu-bar";
-import AgentSkill from "@/components/agent-skill";
-import AgentDrawer from "@/components/agent-drawer";
 
 const icons = [
   {

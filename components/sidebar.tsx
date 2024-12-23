@@ -23,7 +23,7 @@ const Sidebar = () => {
             <h1 className="font-bold mb-2">{link.name}</h1>
             <div className="space-y-3">
               {link.links.map((item, index) => (
-                <div className="hover:bg-white p-1 rounded-md ml-2">
+                <div className="hover:bg-white p-1 rounded-md ml-2" key={index}>
                   <Link
                     href={`/${link.name
                       .toLowerCase()

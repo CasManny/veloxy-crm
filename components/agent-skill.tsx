@@ -1,25 +1,21 @@
-import React from "react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+    Dialog,
+    DialogContent,
+    DialogTrigger
 } from "@/components/ui/dialog";
-import { Button } from "./ui/button";
-import Image from "next/image";
 import {
-  House,
-  Mail,
-  Paperclip,
-  ReceiptIcon,
-  Scroll,
-  Ship,
-  User,
-  X,
+    House,
+    Mail,
+    Paperclip,
+    ReceiptIcon,
+    Scroll,
+    Ship,
+    User,
+    X,
 } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
+import { Button } from "./ui/button";
 
 const AgentSkill = () => {
   return (

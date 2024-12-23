@@ -1,7 +1,6 @@
-import { Card } from "@/components/ui/card";
+import { ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import NumberTicker from "../ui/number-ticker";
-import { ChevronDown } from "lucide-react";
 const intervals = ["1W", "1M", "1Y"];
 
 const CostCard = () => {

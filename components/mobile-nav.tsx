@@ -1,23 +1,19 @@
 "use client";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
+    Sheet,
+    SheetContent,
+    SheetTrigger
 } from "@/components/ui/sheet";
 import {
-  Lightbulb,
-  LogOut,
-  Mail,
-  Menu,
-  MessageSquare,
-  MessagesSquare,
-  Phone,
-  Plus,
-  Proportions,
-  Settings,
+    Lightbulb,
+    LogOut,
+    Mail,
+    MessageSquare,
+    MessagesSquare,
+    Phone,
+    Plus,
+    Proportions,
+    Settings
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";

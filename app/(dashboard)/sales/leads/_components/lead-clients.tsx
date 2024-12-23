@@ -124,7 +124,7 @@ const leadClients = [
     ],
   },
   {
-    image: "/testimonials-4.jpg",
+    image: "/testimonials-1.jpg",
     name: "Michael Jones",
     position: "CEO",
     country: "UK",
@@ -156,7 +156,7 @@ const leadClients = [
     ],
   },
   {
-    image: "/testimonials-5.jpg",
+    image: "/testimonials-1.jpg",
     name: "Emma Davis",
     position: "Head of Product",
     country: "Australia",
@@ -188,7 +188,7 @@ const leadClients = [
     ],
   },
   {
-    image: "/images/david_brown.jpeg",
+    image: "/testimonials-1.jpg",
     name: "David Brown",
     position: "COO",
     country: "Germany",
@@ -373,7 +373,7 @@ const LeadClientCard = ({
                         </div>
                         <div className="my-5">
                           {reasonForSelection.map((item, index) => (
-                            <div className="flex flex-col md:flex-row items-center gap-2">
+                            <div className="flex flex-col md:flex-row items-center gap-2" key={index}>
                               <div className="item-center w-full gap-3 bg-white p-5 rounded-lg">
                                 <CheckCircle className="size-14 text-brand-1" />
                                 <div className="">

@@ -3,8 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
-import { ArrowDown, ArrowUpDown, ChevronDown } from "lucide-react";
-import dayjs from "dayjs";
+import { ArrowDown, ChevronDown } from "lucide-react";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.

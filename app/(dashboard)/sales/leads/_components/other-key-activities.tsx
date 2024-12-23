@@ -1,11 +1,9 @@
 "use client";
-import { Card } from "@/components/ui/card";
-import { Calendar1, Dot, LucideIcon, Mail } from "lucide-react";
-import Image from "next/image";
-import React, { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Phone, FileText } from "lucide-react";
 import { ResponsiveModal } from "@/components/responsive-modal";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card } from "@/components/ui/card";
+import { Calendar1, Dot, FileText, LucideIcon, Mail, Phone } from "lucide-react";
+import { useState } from "react";
 
 const activities = [
   {

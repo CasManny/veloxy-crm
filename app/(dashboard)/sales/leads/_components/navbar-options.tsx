@@ -96,7 +96,7 @@ const NavbarLeadsOptions = () => {
       </div>
       <div className="flex items-center gap-2">
         {tabs.map((tab, index) => (
-          <div className="border flex items-center gap-1 rounded p-1">
+          <div className="border flex items-center gap-1 rounded p-1" key={index}>
             <tab.Icon />
             <span>{tab.label}</span>
           </div>
